@@ -1,0 +1,1597 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MONICA KARTIKA INDAH RIYANTI (MONIC) | 12 TKJ SMK BANGUN NUSA BANGSA - VENOM TECH HUB</title>
+  <meta name="description" content="Portfolio resmi Monica Kartika Indah Riyanti (Monic) - Kelas 12 TKJ SMK Bangun Nusa Bangsa. Spesialis Mikrotik, Web Server, Coding, Video Editor, Desain Grafis, dan Praktik PKL di PT Dwi Prima Rezeky bertema Marvel Venom HD.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            venom: {
+              dark: '#07080c',
+              slate: '#0d0f17',
+              card: '#10141f',
+              cyan: '#00f0ff',
+              purple: '#9333ea',
+              magenta: '#c026d3',
+              red: '#ef4444',
+              slime: '#10b981',
+              silver: '#e2e8f0'
+            }
+          },
+          fontFamily: {
+            heading: ['Orbitron', 'sans-serif'],
+            body: ['Plus Jakarta Sans', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#07080c] text-slate-100 min-h-screen relative selection:bg-cyan-500 selection:text-black">
+
+  <!-- ========================================================================
+       TOP SYMBIOTE SCANLINE & AMBIENT GRID OVERLAY
+       ======================================================================== -->
+  <div class="fixed inset-0 pointer-events-none symbiote-grid-overlay z-0 opacity-40"></div>
+  <div class="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-cyan-400 to-purple-600 z-50"></div>
+
+  <!-- ========================================================================
+       STICKY HIGH-TECH NAVBAR
+       ======================================================================== -->
+  <header class="sticky top-0 z-40 bg-[#07080c]/90 backdrop-blur-xl border-b border-cyan-500/20 px-4 lg:px-10 py-3 transition-all duration-300">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      
+      <!-- Brand & Marvel Venom Emblem -->
+      <a href="#hero" class="flex items-center gap-3 group kelindes-trigger">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-slate-900 to-black border border-cyan-400/50 flex items-center justify-center shadow-[0_0_15px_rgba(0,240,255,0.4)] group-hover:border-cyan-400 group-hover:scale-105 transition-all">
+          <!-- Marvel Venom Emblem SVG -->
+          <svg class="w-7 h-7 text-cyan-400 group-hover:text-cyan-300" viewBox="0 0 100 100" fill="currentColor">
+            <!-- Stylized Venom Eyes & Spiders -->
+            <path d="M 50,15 C 30,15 15,35 18,65 C 20,80 35,90 50,90 C 65,90 80,80 82,65 C 85,35 70,15 50,15 Z" fill="#0b0e14" stroke="#00f0ff" stroke-width="3"/>
+            <path d="M 28,38 C 34,36 46,48 42,58 C 36,60 26,52 28,38 Z" fill="#ffffff"/>
+            <path d="M 72,38 C 66,36 54,48 58,58 C 64,60 74,52 72,38 Z" fill="#ffffff"/>
+            <path d="M 32,70 Q 50,82 68,70 Q 50,75 32,70 Z" fill="#ffffff"/>
+          </svg>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="font-heading font-black text-lg tracking-wider text-white group-hover:text-cyan-300 transition-colors">MONICA</span>
+            <span class="text-xs px-2 py-0.5 rounded-full font-bold bg-cyan-500/20 text-cyan-300 border border-cyan-400/30">MONIC</span>
+            <span class="text-[10px] uppercase font-bold tracking-widest px-1.5 py-0.5 rounded bg-red-500/20 text-red-400 border border-red-500/30">MARVEL VENOM EDITION</span>
+          </div>
+          <p class="text-[11px] text-slate-400 font-mono tracking-tight flex items-center gap-1.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
+            12 TKJ • SMK BANGUN NUSA BANGSA
+          </p>
+        </div>
+      </a>
+
+      <!-- Navigation Menu Links (with Venom Kelindes Effect on Click) -->
+      <nav class="hidden lg:flex items-center gap-1 font-medium text-sm">
+        <a href="#about" class="px-3.5 py-1.5 rounded-lg text-slate-300 hover:text-cyan-300 hover:bg-cyan-500/10 transition-all font-heading text-xs tracking-wider kelindes-trigger">BIODATA</a>
+        <a href="#tkj-skills" class="px-3.5 py-1.5 rounded-lg text-slate-300 hover:text-cyan-300 hover:bg-cyan-500/10 transition-all font-heading text-xs tracking-wider kelindes-trigger">TKJ & MIKROTIK</a>
+        <a href="#creative-skills" class="px-3.5 py-1.5 rounded-lg text-slate-300 hover:text-cyan-300 hover:bg-cyan-500/10 transition-all font-heading text-xs tracking-wider kelindes-trigger">EDITOR & DESAIN</a>
+        <a href="#internship-pkl" class="px-3.5 py-1.5 rounded-lg text-slate-300 hover:text-cyan-300 hover:bg-cyan-500/10 transition-all font-heading text-xs tracking-wider kelindes-trigger">PKL PT DWI PRIMA</a>
+        <a href="#school-smk" class="px-3.5 py-1.5 rounded-lg text-slate-300 hover:text-cyan-300 hover:bg-cyan-500/10 transition-all font-heading text-xs tracking-wider kelindes-trigger">SMK BANGUN NUSA</a>
+        <a href="#ai-digital-hub" class="px-3.5 py-1.5 rounded-lg text-slate-300 hover:text-cyan-300 hover:bg-cyan-500/10 transition-all font-heading text-xs tracking-wider kelindes-trigger">AI DIGITAL LAB</a>
+      </nav>
+
+      <!-- Right Action Controls (Login, Sound FX, Kelindes Counter) -->
+      <div class="flex items-center gap-2.5">
+        
+        <!-- Live Squish Counter Badge -->
+        <div id="kelindes-counter-badge" class="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-red-950/60 border border-red-500/40 text-[11px] font-mono text-red-300 shadow-[0_0_10px_rgba(239,68,68,0.3)]">
+          <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+          <span>0x SQUISHED!</span>
+        </div>
+
+        <!-- Sound FX Toggle -->
+        <button id="sound-toggle-btn" class="p-2 rounded-lg bg-slate-900 border border-slate-700 hover:border-cyan-400 text-slate-300 transition-all flex items-center gap-1.5 kelindes-trigger" title="Toggle Sound FX">
+          <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+          </svg>
+          <span class="hidden md:inline text-xs text-cyan-400 font-bold">Audio ON</span>
+        </button>
+
+        <!-- Symbiote Database TKJ Access Status / Button -->
+        <div id="auth-status-badge" class="flex items-center">
+          <button class="open-db-btn btn-venom-primary text-xs py-2 px-3.5 kelindes-trigger font-heading tracking-wide flex items-center gap-1.5 shadow-[0_0_15px_rgba(0,240,255,0.4)]">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2 1.5 3 3.5 3h9c2 0 3.5-1 3.5-3V7c0-2-1.5-3-3.5-3h-9C5.5 4 4 5 4 7zm0 5h16M9 4v16" />
+            </svg>
+            <span>DATABASE TKJ</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       HERO SECTION - HD MARVEL VENOM & MONIC CYBER SYMBIOTE INTRO
+       ======================================================================== -->
+  <section id="hero" class="relative pt-12 pb-20 px-4 lg:px-10 overflow-hidden">
+    
+    <!-- Ambient Symbiote Glow Orbs -->
+    <div class="absolute top-10 left-1/4 w-96 h-96 bg-cyan-600/15 rounded-full blur-[120px] pointer-events-none"></div>
+    <div class="absolute top-20 right-1/4 w-96 h-96 bg-purple-600/20 rounded-full blur-[140px] pointer-events-none"></div>
+    <div class="absolute -bottom-10 left-1/2 -translate-x-1/2 w-[600px] h-60 bg-red-600/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
+      
+      <!-- Left Column: Bio Header, Credentials, & Quick Action Buttons -->
+      <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+        
+        <!-- Live Badges -->
+        <div class="inline-flex flex-wrap items-center justify-center lg:justify-start gap-2.5">
+          <span class="px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-400/40 text-cyan-300 font-mono text-xs font-semibold flex items-center gap-1.5 shadow-[0_0_15px_rgba(0,240,255,0.25)]">
+            <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+            TKJ NETWORK ENGINEER &amp; WEB SERVER
+          </span>
+          <span class="px-3 py-1 rounded-full bg-purple-500/10 border border-purple-400/40 text-purple-300 font-mono text-xs font-semibold flex items-center gap-1.5">
+            <svg class="w-3.5 h-3.5 text-purple-400" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 11H9v-2h2v2zm0-4H9V5h2v4z"/>
+            </svg>
+            CREATIVE VIDEO EDITOR &amp; DESAIN GRAFIS
+          </span>
+          <span class="px-3 py-1 rounded-full bg-red-500/10 border border-red-500/40 text-red-300 font-mono text-xs font-semibold flex items-center gap-1.5">
+            <span class="text-red-400">⚡</span>
+            EX-PKL PT DWI PRIMA REZEKY
+          </span>
+        </div>
+
+        <!-- Profile Identity & Photo Badge (Small & Tasteful as requested) -->
+        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+          <!-- Small Photo of Monic -->
+          <div class="relative group flex-shrink-0">
+            <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden p-1 bg-gradient-to-br from-cyan-400 via-purple-600 to-red-500 shadow-[0_0_20px_rgba(0,240,255,0.4)] transition-transform duration-300 group-hover:scale-105">
+              <img src="assets/monic-photo.jpg" alt="Foto Asli Monica Kartika Indah Riyanti (Monic)" class="w-full h-full object-cover object-top rounded-xl" />
+            </div>
+            <!-- Online Symbiote Bond Indicator -->
+            <span class="absolute -bottom-1 -right-1 flex h-4 w-4">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-4 w-4 bg-emerald-500 border-2 border-black" title="Host Monic Online"></span>
+            </span>
+          </div>
+          
+          <div class="text-center sm:text-left space-y-1">
+            <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-cyan-500/10 border border-cyan-400/30 text-[10px] font-mono text-cyan-300">
+              <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
+              <span>HOST TERVERIFIKASI &bull; MONICA</span>
+            </div>
+            <h2 class="text-xs md:text-sm font-heading tracking-widest text-slate-400 uppercase">WE ARE VENOM // WELCOME TO THE DIGITAL SYMBIOSIS OF</h2>
+            <div class="flex items-center justify-center sm:justify-start gap-2">
+              <span class="text-xl sm:text-2xl font-heading font-bold text-cyan-300 glow-cyan">"MONIC"</span>
+              <span class="text-slate-500">|</span>
+              <span class="text-xs sm:text-sm font-medium text-slate-300">Kelas 12 TKJ SMK Bangun Nusa Bangsa</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Heading: Full Name & Symbiote Theme -->
+        <div class="space-y-2">
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-heading font-black tracking-tight leading-tight text-transparent bg-clip-text bg-gradient-to-r from-white via-cyan-100 to-cyan-400 drop-shadow-[0_4px_25px_rgba(0,240,255,0.3)]">
+            MONICA KARTIKA INDAH RIYANTI
+          </h1>
+        </div>
+
+        <!-- Description Paragraph -->
+        <p class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto lg:mx-0">
+          Menggabungkan kehandalan teknikal <strong class="text-cyan-300">Jaringan Komputer (Mikrotik, Routing, Web Server, Linux)</strong> dengan daya magis <strong class="text-purple-300">Editor Video &amp; Desain Grafis</strong>. Ditenagai oleh entitas symbiote <strong class="text-red-400">Marvel Venom</strong> dan <strong class="text-cyan-300">AI Digital Assistant</strong> untuk menghadirkan portfolio interaktif beresolusi tinggi!
+        </p>
+
+        <!-- Action CTAs -->
+        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3.5 pt-2">
+          <a href="#tkj-skills" class="btn-venom-primary kelindes-trigger text-sm">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+            </svg>
+            Eksplorasi Skill TKJ &amp; Server
+          </a>
+          
+          <button class="open-db-btn btn-venom-purple kelindes-trigger text-sm">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2 1.5 3 3.5 3h9c2 0 3.5-1 3.5-3V7c0-2-1.5-3-3.5-3h-9C5.5 4 4 5 4 7zm0 5h16M9 4v16" />
+            </svg>
+            Database Jaringan &amp; Server Lab
+          </button>
+
+          <!-- Interactive Test Kelindes Button -->
+          <button id="kelindes-test-pad" class="btn-venom-ghost kelindes-trigger text-xs py-2.5 px-3 border-red-500/40 text-red-300 hover:border-red-400 hover:text-red-200" title="Klik di mana saja untuk menguji efek kepala venom kelindes!">
+            💥 Uji Efek Venom Kelindes!
+          </button>
+        </div>
+
+        <!-- Quick Stats Counter Strip -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-4 max-w-xl mx-auto lg:mx-0">
+          <div class="glass-panel p-3 rounded-xl border border-cyan-500/20 text-center">
+            <div class="font-heading font-black text-xl text-cyan-400">100+</div>
+            <div class="text-[11px] text-slate-400 uppercase tracking-wider font-semibold">Mikrotik Configs</div>
+          </div>
+          <div class="glass-panel p-3 rounded-xl border border-purple-500/20 text-center">
+            <div class="font-heading font-black text-xl text-purple-400">50+</div>
+            <div class="text-[11px] text-slate-400 uppercase tracking-wider font-semibold">Web Servers Up</div>
+          </div>
+          <div class="glass-panel p-3 rounded-xl border border-red-500/20 text-center">
+            <div class="font-heading font-black text-xl text-red-400">30+</div>
+            <div class="text-[11px] text-slate-400 uppercase tracking-wider font-semibold">Video &amp; Desain</div>
+          </div>
+          <div class="glass-panel p-3 rounded-xl border border-emerald-500/20 text-center">
+            <div class="font-heading font-black text-xl text-emerald-400">100%</div>
+            <div class="text-[11px] text-slate-400 uppercase tracking-wider font-semibold">PKL Approved</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Marvel Venom HD Visual Centerpiece & Monic Symbiote Frame -->
+      <div class="lg:col-span-5 flex justify-center relative">
+        
+        <!-- Glow Backing Rings -->
+        <div class="relative w-80 h-80 sm:w-96 sm:h-96">
+          <div class="absolute inset-0 rounded-full border-2 border-dashed border-cyan-400/40 animate-[spin_25s_linear_infinite] pointer-events-none"></div>
+          <div class="absolute inset-4 rounded-full border border-purple-500/30 animate-[spin_18s_linear_infinite_reverse] pointer-events-none"></div>
+          
+          <!-- Symbiote Main Card Frame -->
+          <div class="glass-panel cyber-clip w-full h-full p-4 flex flex-col items-center justify-center text-center relative overflow-hidden box-glow-cyan">
+            
+            <!-- Symbiote Liquid Particle SVG Backing -->
+            <svg class="absolute inset-0 w-full h-full opacity-30 pointer-events-none" viewBox="0 0 400 400">
+              <path d="M 50,50 Q 150,20 200,80 T 350,150 Q 380,280 250,350 T 80,300 Q 10,180 50,50 Z" fill="none" stroke="#00f0ff" stroke-width="1.5" stroke-dasharray="8 4"/>
+              <circle cx="200" cy="200" r="160" fill="none" stroke="#9333ea" stroke-width="1" opacity="0.4"/>
+            </svg>
+
+            <!-- Marvel Venom HD Vector Head & Symbiote Teeth Illustration -->
+            <div class="relative w-44 h-44 sm:w-52 sm:h-52 mb-2 float-anim cursor-pointer kelindes-trigger" title="Klik Venom untuk respon symbiote!">
+              <svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" class="drop-shadow-[0_15px_30px_rgba(0,240,255,0.4)]">
+                <defs>
+                  <radialGradient id="venomSkinLarge" cx="45%" cy="35%" r="70%">
+                    <stop offset="0%" stop-color="#1e1b4b" />
+                    <stop offset="50%" stop-color="#0c0d18" />
+                    <stop offset="100%" stop-color="#020305" />
+                  </radialGradient>
+                  <linearGradient id="tongueMain" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#f43f5e" />
+                    <stop offset="100%" stop-color="#9f1239" />
+                  </linearGradient>
+                </defs>
+                
+                <!-- Main Venom Head Shape -->
+                <path d="M 100,15 C 45,15 25,60 30,120 C 35,165 70,185 100,185 C 130,185 165,165 170,120 C 175,60 155,15 100,15 Z" fill="url(#venomSkinLarge)" stroke="#00f0ff" stroke-width="3"/>
+                
+                <!-- Venom Sharp Alien White Eyes -->
+                <path d="M 45,60 C 58,55 82,78 74,98 C 62,102 42,88 45,60 Z" fill="#ffffff" filter="drop-shadow(0 0 8px #00f0ff)"/>
+                <path d="M 155,60 C 142,55 118,78 126,98 C 138,102 158,88 155,60 Z" fill="#ffffff" filter="drop-shadow(0 0 8px #00f0ff)"/>
+                
+                <!-- Inner eye tendril cuts -->
+                <path d="M 52,68 Q 65,75 58,90" stroke="#000" stroke-width="2" fill="none"/>
+                <path d="M 148,68 Q 135,75 142,90" stroke="#000" stroke-width="2" fill="none"/>
+
+                <!-- Wide Predator Mouth & Gums -->
+                <path d="M 40,125 Q 100,175 160,125 Q 100,140 40,125 Z" fill="#3f0713" stroke="#ef4444" stroke-width="2"/>
+
+                <!-- Serrated Razor Venom Teeth -->
+                <polygon points="46,128 52,142 58,128 66,145 74,129 82,147 90,130 98,148 106,130 114,147 122,129 130,145 138,128 146,142 152,128" fill="#ffffff"/>
+                <polygon points="50,138 56,126 64,138 72,126 80,139 88,126 96,140 104,126 112,139 120,126 128,138 136,126 144,138" fill="#ffffff"/>
+
+                <!-- Iconic Wild Slithering Venom Tongue with Green Toxic Saliva Droplets -->
+                <path d="M 90,135 C 80,165 40,160 20,175 C 32,185 85,170 110,148 Z" fill="url(#tongueMain)" stroke="#fb7185" stroke-width="2"/>
+                <circle cx="22" cy="176" r="4" fill="#10b981" filter="drop-shadow(0 0 6px #10b981)"/>
+                <circle cx="34" cy="182" r="2.5" fill="#10b981"/>
+              </svg>
+            </div>
+
+            <!-- Host Badge Label -->
+            <div class="relative z-10 text-center">
+              <span class="inline-block px-3 py-1 rounded bg-black/80 border border-cyan-400 text-cyan-300 font-heading font-black text-xs tracking-widest shadow-[0_0_15px_rgba(0,240,255,0.4)]">
+                HOST SYMBIOTE: MONIC
+              </span>
+              <p class="text-[11px] text-slate-300 font-mono mt-1">Status: Active &amp; Connected</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 1: BIODATA & DATA DIRI LENGKAP MONICA KARTIKA INDAH RIYANTI
+       ======================================================================== -->
+  <section id="about" class="py-16 px-4 lg:px-10 border-t border-cyan-500/10 relative">
+    <div class="max-w-7xl mx-auto">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/50 border border-cyan-500/30 text-cyan-400 font-mono text-xs">
+          <span>01 // PROFIL &amp; DATA DIRI</span>
+        </div>
+        <h2 class="text-2xl sm:text-4xl font-heading font-extrabold text-white tracking-wide">
+          BIODATA LENGKAP <span class="text-cyan-400 glow-cyan">MONIC</span>
+        </h2>
+        <p class="text-slate-400 text-sm leading-relaxed">
+          Mengenal lebih dekat siswi berprestasi dari kelas 12 TKJ SMK Bangun Nusa Bangsa yang siap terjun ke industri teknologi jaringan dan multimedia kreatif.
+        </p>
+      </div>
+
+      <!-- Main Profile Bento Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Card 1: Data Identitas Diri -->
+        <div class="glass-panel p-6 rounded-2xl border border-cyan-500/20 space-y-5">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-400 flex items-center justify-center text-cyan-400 text-xl font-bold font-heading">
+              ID
+            </div>
+            <div>
+              <h3 class="font-heading font-bold text-lg text-white">Identitas Pribadi</h3>
+              <p class="text-xs text-slate-400">Data Pokok Siswa &amp; Rekam Jejak</p>
+            </div>
+          </div>
+
+          <div class="space-y-3 font-mono text-xs">
+            <div class="p-2.5 rounded-lg bg-slate-900/80 border border-slate-800 flex justify-between">
+              <span class="text-slate-400">Nama Lengkap:</span>
+              <span class="text-cyan-300 font-bold text-right">MONICA KARTIKA INDAH RIYANTI</span>
+            </div>
+            <div class="p-2.5 rounded-lg bg-slate-900/80 border border-slate-800 flex justify-between">
+              <span class="text-slate-400">Nama Panggilan:</span>
+              <span class="text-white font-bold">Monic</span>
+            </div>
+            <div class="p-2.5 rounded-lg bg-slate-900/80 border border-slate-800 flex justify-between">
+              <span class="text-slate-400">Tingkat / Kelas:</span>
+              <span class="text-cyan-400 font-bold">Kelas 12 (Tingkat Akhir)</span>
+            </div>
+            <div class="p-2.5 rounded-lg bg-slate-900/80 border border-slate-800 flex justify-between">
+              <span class="text-slate-400">Kompetensi Keahlian:</span>
+              <span class="text-emerald-400 font-bold">Teknik Komputer &amp; Jaringan (TKJ)</span>
+            </div>
+            <div class="p-2.5 rounded-lg bg-slate-900/80 border border-slate-800 flex justify-between">
+              <span class="text-slate-400">Asal Sekolah:</span>
+              <span class="text-purple-300 font-bold">SMK Bangun Nusa Bangsa</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Visi & Karakter Keunggulan Monic -->
+        <div class="glass-panel p-6 rounded-2xl border border-purple-500/20 space-y-5">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-400 flex items-center justify-center text-purple-400 text-xl font-bold font-heading">
+              SK
+            </div>
+            <div>
+              <h3 class="font-heading font-bold text-lg text-white">Karakter &amp; Etos Kerja</h3>
+              <p class="text-xs text-slate-400">Dedikasi &amp; Kemampuan Adaptasi</p>
+            </div>
+          </div>
+
+          <div class="space-y-3 text-xs text-slate-300 leading-relaxed">
+            <div class="p-3 rounded-lg bg-slate-900/80 border border-purple-500/20 flex gap-2.5">
+              <span class="text-purple-400 font-bold text-sm">✓</span>
+              <div>
+                <strong class="text-white block font-heading text-[11px] mb-0.5">Problem Solver Jaringan:</strong>
+                Mampu menganalisis troubleshoot routing, kegagalan paket data, dan konfigurasi server dengan cepat dan presisi.
+              </div>
+            </div>
+            <div class="p-3 rounded-lg bg-slate-900/80 border border-purple-500/20 flex gap-2.5">
+              <span class="text-purple-400 font-bold text-sm">✓</span>
+              <div>
+                <strong class="text-white block font-heading text-[11px] mb-0.5">Kreativitas Dua Sisi:</strong>
+                Tidak hanya paham logika teknikal jaringan TKJ, namun juga menguasai estetika visual desain grafis dan editing video.
+              </div>
+            </div>
+            <div class="p-3 rounded-lg bg-slate-900/80 border border-purple-500/20 flex gap-2.5">
+              <span class="text-purple-400 font-bold text-sm">✓</span>
+              <div>
+                <strong class="text-white block font-heading text-[11px] mb-0.5">Pengalaman Praktik Industri:</strong>
+                Teruji langsung melalui PKL di PT Dwi Prima Rezeky dalam menangani infrastruktur IT perkantoran secara profesional.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Link Cepat & Hubungi Monic -->
+        <div class="glass-panel p-6 rounded-2xl border border-cyan-500/20 flex flex-col justify-between space-y-4">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-12 h-12 rounded-xl bg-red-500/10 border border-red-400 flex items-center justify-center text-red-400 text-xl font-bold font-heading">
+                HUB
+              </div>
+              <div>
+                <h3 class="font-heading font-bold text-lg text-white">Pusat Interaksi</h3>
+                <p class="text-xs text-slate-400">Koneksi &amp; Jelajah Data</p>
+              </div>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed mb-4">
+              Silakan jelajahi sertifikasi, simulasi terminal Mikrotik, atau ajukan pertanyaan langsung melalui <strong class="text-cyan-400">Asisten AI Symbiote Monic</strong> di pojok kanan bawah!
+            </p>
+          </div>
+
+          <div class="space-y-2.5">
+            <a href="#internship-pkl" class="w-full btn-venom-ghost kelindes-trigger text-xs justify-center font-heading py-2.5">
+              Lihat Detail PKL PT Dwi Prima Rezeky →
+            </a>
+            <a href="#school-smk" class="w-full btn-venom-ghost kelindes-trigger text-xs justify-center font-heading py-2.5 border-purple-500/40 text-purple-300 hover:border-purple-400">
+              Profil SMK Bangun Nusa Bangsa →
+            </a>
+            <button class="open-db-btn w-full btn-venom-primary kelindes-trigger text-xs justify-center font-heading py-2.5">
+              Buka Database Jaringan &amp; Server TKJ →
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 2: SKILL TKJ, MIKROTIK, WEB SERVER & CODING
+       ======================================================================== -->
+  <section id="tkj-skills" class="py-16 px-4 lg:px-10 bg-[#090b12] border-t border-cyan-500/10 relative">
+    <div class="max-w-7xl mx-auto">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-500/40 text-cyan-300 font-mono text-xs">
+          <span>02 // KOMPETENSI TEKNIK KOMPUTER &amp; JARINGAN (TKJ)</span>
+        </div>
+        <h2 class="text-2xl sm:text-4xl font-heading font-black text-white">
+          PRAKTIK <span class="text-cyan-400 glow-cyan">MIKROTIK</span>, WEB SERVER &amp; CODING
+        </h2>
+        <p class="text-slate-400 text-sm">
+          Pengalaman komprehensif Monic dalam membangun arsitektur jaringan andal, manajemen bandwidth QoS, deployment web server produksi, dan otomatisasi coding.
+        </p>
+      </div>
+
+      <!-- Skill Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Skill 1: Konfigurasi Mikrotik Routerboard -->
+        <div class="glass-panel p-5 rounded-2xl border border-cyan-500/20 hover:border-cyan-400/60 transition-all space-y-4">
+          <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-400 flex items-center justify-center text-cyan-300">
+            <!-- Mikrotik Router Icon -->
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-heading font-bold text-base text-white">Mikrotik RouterOS</h3>
+            <p class="text-xs text-cyan-400 font-mono">Routing &amp; Bandwidth QoS</p>
+          </div>
+          <ul class="space-y-2 text-xs text-slate-300 font-mono">
+            <li class="flex items-start gap-1.5">
+              <span class="text-cyan-400">▹</span>
+              <span>Routing Static &amp; Dynamic (OSPF / BGP)</span>
+            </li>
+            <li class="flex items-start gap-1.5">
+              <span class="text-cyan-400">▹</span>
+              <span>Bandwidth Queue Tree &amp; PCQ Per-Client</span>
+            </li>
+            <li class="flex items-start gap-1.5">
+              <span class="text-cyan-400">▹</span>
+              <span>Firewall NAT (Masquerade &amp; dst-nat)</span>
+            </li>
+            <li class="flex items-start gap-1.5">
+              <span class="text-cyan-400">▹</span>
+              <span>Hotspot Gateway &amp; User Manager</span>
+            </li>
+            <li class="flex items-start gap-1.5">
+              <span class="text-cyan-400">▹</span>
+              <span>VLAN Trunking &amp; Bridge Filtering</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Skill 2: Web Server & Linux Administration -->
+        <div class="glass-panel p-5 rounded-2xl border border-purple-500/20 hover:border-purple-400/60 transition-all space-y-4">
+          <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-400 flex items-center justify-center text-purple-300">
+            <!-- Server Stack Icon -->
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-heading font-bold text-base text-white">Web Server &amp; Linux</h3>
+            <p class="text-xs text-purple-400 font-mono">Nginx, Apache, Debian &amp; Ubuntu</p>
+          </div>
+          <ul class="space-y-2 text-xs text-slate-300 font-mono">
+            <li class="flex items-start gap-1.5">
+              <span class="text-purple-400">▹</span>
+              <span>Nginx Reverse Proxy &amp; Apache HTTP</span>
+            </li>
+            <li class="flex items-start gap-1.5">
+              <span class="text-purple-400">▹</span>
+              <span>Linux Debian 11/12 &amp; Ubuntu Server</span>
+            </li>
+            <li class="flex items-start gap-1.5">
+              <span class="text-purple-400">▹</span>
+              <span>SSL/TLS Encryption (Let's Encrypt / Certbot)</span>
+            </li>
+            <li class="flex items-start gap-1.5">
+              <span class="text-purple-400">▹</span>
+              <span>BIND9 DNS Server &amp; DHCP Server Setup</span>
+            </li>
+            <li class="flex items-start gap-1.5">
+              <span class="text-purple-400">▹</span>
+              <span>Database MySQL / MariaDB &amp; phpMyAdmin</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Skill 3: Coding & Web Development -->
+        <div class="glass-panel p-5 rounded-2xl border border-emerald-500/20 hover:border-emerald-400/60 transition-all space-y-4">
+          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-400 flex items-center justify-center text-emerald-300">
+            <!-- Code Bracket Icon -->
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-heading font-bold text-base text-white">Coding &amp; Web Dev</h3>
+            <p class="text-xs text-emerald-400 font-mono">Frontend, Backend &amp; Scripts</p>
+          </div>
+          <ul class="space-y-2 text-xs text-slate-300 font-mono">
+            <li class="flex items-start gap-1.5">
+              <span class="text-emerald-400">▹</span>
+              <span>HTML5, Modern CSS3, &amp; Tailwind</span>
+            </li>
+            <li class="flex items-start gap-1.5">
+              <span class="text-emerald-400">▹</span>
+              <span>JavaScript ES6+ &amp; DOM Web Apps</span>
+            </li>
+            <li class="flex items-start gap-1.5">
+              <span class="text-emerald-400">▹</span>
+              <span>PHP Backend &amp; RESTful APIs Integration</span>
+            </li>
+            <li class="flex items-start gap-1.5">
+              <span class="text-emerald-400">▹</span>
+              <span>Python Networking &amp; Automation Scripts</span>
+            </li>
+            <li class="flex items-start gap-1.5">
+              <span class="text-emerald-400">▹</span>
+              <span>Bash Shell Scripting for Linux Admin</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Skill 4: Hardware & Fiber Optic Cabling -->
+        <div class="glass-panel p-5 rounded-2xl border border-red-500/20 hover:border-red-400/60 transition-all space-y-4">
+          <div class="w-12 h-12 rounded-xl bg-red-500/10 border border-red-400 flex items-center justify-center text-red-300">
+            <!-- Network Topology Cable Icon -->
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-heading font-bold text-base text-white">Hardware &amp; Fiber Optic</h3>
+            <p class="text-xs text-red-400 font-mono">Cabling, Splicing &amp; Switches</p>
+          </div>
+          <ul class="space-y-2 text-xs text-slate-300 font-mono">
+            <li class="flex items-start gap-1.5">
+              <span class="text-red-400">▹</span>
+              <span>Fiber Optic Fusion Splicer &amp; Cleaver</span>
+            </li>
+            <li class="flex items-start gap-1.5">
+              <span class="text-red-400">▹</span>
+              <span>Visual Fault Locator (VFL) &amp; OPM Testing</span>
+            </li>
+            <li class="flex items-start gap-1.5">
+              <span class="text-red-400">▹</span>
+              <span>Crimping UTP Cat5e/Cat6 (Straight &amp; Cross)</span>
+            </li>
+            <li class="flex items-start gap-1.5">
+              <span class="text-red-400">▹</span>
+              <span>Managed Switch Port Configuration</span>
+            </li>
+            <li class="flex items-start gap-1.5">
+              <span class="text-red-400">▹</span>
+              <span>Subnetting VLSM &amp; CIDR Network Planning</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 3: SKILL KREATIF - VIDEO EDITOR & DESAIN GRAFIS
+       ======================================================================== -->
+  <section id="creative-skills" class="py-16 px-4 lg:px-10 border-t border-cyan-500/10 relative">
+    <div class="max-w-7xl mx-auto">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-950/60 border border-purple-500/40 text-purple-300 font-mono text-xs">
+          <span>03 // KREATIF &amp; MULTIMEDIA</span>
+        </div>
+        <h2 class="text-2xl sm:text-4xl font-heading font-black text-white">
+          SKILL <span class="text-purple-400 glow-purple">EDITOR VIDEO</span> &amp; DESAIN GRAFIS
+        </h2>
+        <p class="text-slate-400 text-sm">
+          Sisi artistik Monic dalam mengolah visual sinematik, color grading, motion graphics, serta desain identitas visual profesional.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Video Editor Showcase -->
+        <div class="glass-panel p-6 rounded-2xl border border-purple-500/30 space-y-6">
+          <div class="flex items-center justify-between border-b border-purple-500/20 pb-4">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-xl bg-purple-500/20 border border-purple-400 flex items-center justify-center text-purple-300 text-xl font-bold">
+                🎬
+              </div>
+              <div>
+                <h3 class="font-heading font-bold text-lg text-white">Video Editing &amp; Motion</h3>
+                <p class="text-xs text-purple-300 font-mono">Premiere Pro, After Effects, CapCut PC</p>
+              </div>
+            </div>
+            <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-purple-900/60 border border-purple-400 text-purple-200">ADVANCED</span>
+          </div>
+
+          <div class="space-y-4">
+            <div>
+              <div class="flex justify-between text-xs font-mono mb-1">
+                <span class="text-slate-300">Adobe Premiere Pro (Editing, Cutting &amp; Pacing)</span>
+                <span class="text-purple-400 font-bold">92%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-slate-800 overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-purple-500 to-cyan-400 rounded-full" style="width: 92%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-mono mb-1">
+                <span class="text-slate-300">Adobe After Effects (Motion Graphics &amp; VFX)</span>
+                <span class="text-purple-400 font-bold">85%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-slate-800 overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-purple-500 to-cyan-400 rounded-full" style="width: 85%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-mono mb-1">
+                <span class="text-slate-300">CapCut Pro &amp; DaVinci Resolve (Color Grading &amp; Sound FX)</span>
+                <span class="text-purple-400 font-bold">95%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-slate-800 overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-purple-500 to-cyan-400 rounded-full" style="width: 95%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-3.5 rounded-xl bg-purple-950/30 border border-purple-500/20 text-xs text-slate-300 leading-relaxed font-mono">
+            "Keahlian mengedit konten video promosi sekolah, tutorial konfigurasi IT, cinematic highlight reels, dan video edukasi dengan beat-sync audio yang dinamis."
+          </div>
+        </div>
+
+        <!-- Graphic Design & UI/UX Showcase -->
+        <div class="glass-panel p-6 rounded-2xl border border-cyan-500/30 space-y-6">
+          <div class="flex items-center justify-between border-b border-cyan-500/20 pb-4">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-xl bg-cyan-500/20 border border-cyan-400 flex items-center justify-center text-cyan-300 text-xl font-bold">
+                🎨
+              </div>
+              <div>
+                <h3 class="font-heading font-bold text-lg text-white">Desain Grafis &amp; UI/UX</h3>
+                <p class="text-xs text-cyan-300 font-mono">Photoshop, Illustrator, Canva, Figma</p>
+              </div>
+            </div>
+            <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-cyan-900/60 border border-cyan-400 text-cyan-200">CREATIVE</span>
+          </div>
+
+          <div class="space-y-4">
+            <div>
+              <div class="flex justify-between text-xs font-mono mb-1">
+                <span class="text-slate-300">Adobe Photoshop (Photo Manipulation &amp; Posters)</span>
+                <span class="text-cyan-400 font-bold">90%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-slate-800 overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-cyan-500 to-emerald-400 rounded-full" style="width: 90%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-mono mb-1">
+                <span class="text-slate-300">Figma (UI/UX Wireframing &amp; Prototyping)</span>
+                <span class="text-cyan-400 font-bold">88%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-slate-800 overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-cyan-500 to-emerald-400 rounded-full" style="width: 88%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-mono mb-1">
+                <span class="text-slate-300">Canva &amp; Illustrator (Branding, Feed &amp; Banner)</span>
+                <span class="text-cyan-400 font-bold">94%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-slate-800 overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-cyan-500 to-emerald-400 rounded-full" style="width: 94%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-3.5 rounded-xl bg-cyan-950/30 border border-cyan-500/20 text-xs text-slate-300 leading-relaxed font-mono">
+            "Berpengalaman merancang aset visual beresolusi tinggi, poster teknologi, banner promosi media sosial, hingga layout antarmuka web modern yang estetis."
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 4: PENGALAMAN PKL DI PT DWI PRIMA REZEKY
+       ======================================================================== -->
+  <section id="internship-pkl" class="py-16 px-4 lg:px-10 bg-[#080a10] border-t border-cyan-500/10 relative">
+    <div class="max-w-7xl mx-auto">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-950/60 border border-red-500/40 text-red-300 font-mono text-xs">
+          <span>04 // PENGALAMAN KERJA PRAKTIK INDUSTRI</span>
+        </div>
+        <h2 class="text-2xl sm:text-4xl font-heading font-black text-white">
+          PKL DI <span class="text-red-400 glow-red">PT DWI PRIMA REZEKY</span>
+        </h2>
+        <p class="text-slate-400 text-sm">
+          Dokumentasi dan rekam jejak pelaksanaan Praktik Kerja Lapangan (PKL) Monic di PT Dwi Prima Rezeky sebagai IT Support &amp; Network Infrastructure Intern.
+        </p>
+      </div>
+
+      <!-- Internship Main Card with Links -->
+      <div class="glass-panel p-6 lg:p-8 rounded-3xl border border-red-500/30 space-y-8 relative overflow-hidden">
+        
+        <!-- Background Marvel Symbiote accent -->
+        <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-red-600/10 rounded-full blur-[90px] pointer-events-none"></div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <!-- Company Info & Role -->
+          <div class="lg:col-span-7 space-y-4">
+            <div class="flex flex-wrap items-center gap-2.5">
+              <span class="px-3 py-1 rounded-full bg-red-500/20 border border-red-500/40 text-red-300 text-xs font-mono font-bold">
+                VERIFIED PKL INTERNSHIP
+              </span>
+              <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs font-mono">
+                IT SUPPORT &amp; NETWORK INFRASTRUCTURE
+              </span>
+            </div>
+
+            <h3 class="text-2xl sm:text-3xl font-heading font-black text-white">
+              PT DWI PRIMA REZEKY
+            </h3>
+
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Selama menjalani program Praktik Kerja Lapangan di <strong>PT Dwi Prima Rezeky</strong>, Monic memegang peranan krusial dalam memastikan kestabilan konektivitas jaringan kantor, pemeliharaan workstation karyawan, penataan kabel LAN terstruktur, serta pendampingan teknis harian.
+            </p>
+
+            <!-- Responsibilities Checklist -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 font-mono text-xs text-slate-300">
+              <div class="p-3 rounded-lg bg-slate-900/90 border border-slate-800 flex items-start gap-2">
+                <span class="text-emerald-400 font-bold">✓</span>
+                <span>Maintenance &amp; Troubleshooting Jaringan LAN/WLAN Perkantoran</span>
+              </div>
+              <div class="p-3 rounded-lg bg-slate-900/90 border border-slate-800 flex items-start gap-2">
+                <span class="text-emerald-400 font-bold">✓</span>
+                <span>Konfigurasi &amp; Optimasi Routerboard, Switch, dan Access Point</span>
+              </div>
+              <div class="p-3 rounded-lg bg-slate-900/90 border border-slate-800 flex items-start gap-2">
+                <span class="text-emerald-400 font-bold">✓</span>
+                <span>Instalasi &amp; Crimping Kabel UTP Terstruktur di Ruang Kerja</span>
+              </div>
+              <div class="p-3 rounded-lg bg-slate-900/90 border border-slate-800 flex items-start gap-2">
+                <span class="text-emerald-400 font-bold">✓</span>
+                <span>Pemeliharaan Sistem Komputer, Backup Data, dan Keamanan User</span>
+              </div>
+            </div>
+
+            <!-- Clickable Link Buttons for PT Dwi Prima Rezeky -->
+            <div class="flex flex-wrap items-center gap-3 pt-4">
+              <!-- Official Search / Web Link -->
+              <a href="https://www.google.com/search?q=PT+Dwi+Prima+Rezeky" target="_blank" rel="noopener noreferrer" class="btn-venom-primary kelindes-trigger text-xs py-2.5 px-4 font-heading">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+                Kunjungi Data PT Dwi Prima Rezeky
+              </a>
+
+              <!-- Maps Link -->
+              <a href="https://maps.google.com/?q=PT+Dwi+Prima+Rezeky" target="_blank" rel="noopener noreferrer" class="btn-venom-ghost kelindes-trigger text-xs py-2.5 px-4 font-heading border-red-500/40 text-red-300 hover:border-red-400">
+                <svg class="w-4 h-4 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                Lokasi di Google Maps
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Certificate & Assessment Frame -->
+          <div class="lg:col-span-5">
+            <div class="p-6 rounded-2xl bg-gradient-to-br from-slate-900 to-black border border-red-500/40 shadow-[0_0_30px_rgba(239,68,68,0.2)] text-center space-y-4">
+              <div class="w-16 h-16 mx-auto rounded-full bg-red-500/20 border border-red-400 flex items-center justify-center text-red-400 text-2xl font-black font-heading">
+                ★
+              </div>
+              <div>
+                <span class="text-xs font-mono text-red-400 font-bold uppercase tracking-widest">HASIL EVALUASI PKL</span>
+                <h4 class="font-heading font-black text-xl text-white mt-1">NILAI SANGAT MEMUASKAN</h4>
+                <p class="text-xs text-slate-400 mt-1 font-mono">Predikat: A (Kompeten &amp; Berdedikasi)</p>
+              </div>
+
+              <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 text-left font-mono text-xs space-y-2 text-slate-300">
+                <div class="flex justify-between">
+                  <span class="text-slate-400">Instansi:</span>
+                  <span class="text-white font-bold">PT DWI PRIMA REZEKY</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-slate-400">Peserta:</span>
+                  <span class="text-cyan-300 font-bold">Monica Kartika Indah Riyanti</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-slate-400">Kedisiplinan:</span>
+                  <span class="text-cyan-400 font-bold">80% (Baik &amp; Tanggap)</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-slate-400">Penguasaan IT:</span>
+                  <span class="text-cyan-400 font-bold">Mahir &amp; Tanggap</span>
+                </div>
+              </div>
+
+              <div class="text-[11px] text-slate-500 font-mono">
+                Sertifikat Resmi Terdaftar &amp; Terverifikasi Sekolah
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 5: DATA SEKOLAH LENGKAP - SMK BANGUN NUSA BANGSA
+       ======================================================================== -->
+  <section id="school-smk" class="py-16 px-4 lg:px-10 border-t border-cyan-500/10 relative">
+    <div class="max-w-7xl mx-auto">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-500/40 text-cyan-300 font-mono text-xs">
+          <span>05 // INSTITUSI PENDIDIKAN &amp; DEWAN GURU</span>
+        </div>
+        <h2 class="text-2xl sm:text-4xl font-heading font-black text-white">
+          SMK <span class="text-cyan-400 glow-cyan">BANGUN NUSA BANGSA</span>
+        </h2>
+        <p class="text-slate-400 text-sm">
+          Profil lengkap SMKS Bangun Nusa Bangsa Cibinong Bogor, dewan guru profesional, kurikulum industri, serta fasilitas kejuruan TKJ tempat Monic menuntut ilmu.
+        </p>
+      </div>
+
+      <!-- School Card Details -->
+      <div class="glass-panel p-6 lg:p-8 rounded-3xl border border-cyan-500/30 space-y-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <div class="lg:col-span-8 space-y-5">
+            <div class="flex flex-wrap items-center justify-between gap-3 border-b border-slate-800 pb-4">
+              <div class="flex items-center gap-3">
+                <div class="w-14 h-14 rounded-2xl bg-cyan-500/10 border border-cyan-400 flex items-center justify-center text-cyan-400 font-heading font-bold text-xl shadow-[0_0_15px_rgba(0,240,255,0.3)]">
+                  BNB
+                </div>
+                <div>
+                  <h3 class="font-heading font-bold text-2xl text-white">SMKS BANGUN NUSA BANGSA</h3>
+                  <p class="text-xs text-cyan-300 font-mono">NPSN: 69769379 &bull; Terakreditasi "A" BAN-SM &bull; Yayasan Bangun Nusa Bangsa</p>
+                </div>
+              </div>
+              <span class="px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-400/50 text-emerald-300 font-mono text-xs font-bold">
+                TERAKREDITASI "A"
+              </span>
+            </div>
+
+            <p class="text-slate-300 text-sm leading-relaxed">
+              <strong>SMK Bangun Nusa Bangsa (SMK BNB)</strong> adalah sekolah menengah kejuruan terakreditasi <strong>A</strong> yang berlokasi di Cibinong, Kabupaten Bogor. Dipimpin oleh <strong>Bapak Muhammad Yunus, S.E., M.Pd.</strong>, sekolah ini berkomitmen melahirkan lulusan berkarakter unggul, berdaya saing global, serta siap kerja di era industri 4.0.
+            </p>
+
+            <!-- Rincian Pimpinan & Dewan Guru -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 font-mono text-xs">
+              <div class="p-3.5 rounded-xl bg-slate-900/90 border border-cyan-500/30 space-y-1">
+                <div class="text-cyan-300 font-bold flex items-center gap-1.5">
+                  <span>👔 KEPALA SEKOLAH:</span>
+                </div>
+                <div class="text-white font-bold text-sm">Bpk. Muhammad Yunus, S.E., M.Pd.</div>
+                <div class="text-slate-400 text-[11px]">Penanggung jawab &amp; pembina utama pengembangan kurikulum vokasi SMK BNB.</div>
+              </div>
+
+              <div class="p-3.5 rounded-xl bg-slate-900/90 border border-purple-500/30 space-y-1">
+                <div class="text-purple-300 font-bold flex items-center gap-1.5">
+                  <span>👨‍🏫 DEWAN GURU &amp; INSTRUKTUR:</span>
+                </div>
+                <div class="text-white font-bold text-sm">Pengajar Profesional &amp; Praktisi DUDI</div>
+                <div class="text-slate-400 text-[11px]">Guru produktif TKJ (spesialis Mikrotik, Server Linux, Fiber Optic, Perakitan PC) &amp; guru adaptif/bahasa asing.</div>
+              </div>
+            </div>
+
+            <!-- Alamat & Kontak Resmi -->
+            <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 font-mono text-xs space-y-2 text-slate-300">
+              <div class="flex flex-col sm:flex-row sm:justify-between gap-1">
+                <span class="text-slate-400">📍 Alamat Lengkap:</span>
+                <span class="text-white font-semibold text-right">Jl. Raya SKB No. 8, RT 06/RW 07 (Jl. Roda Pembangunan No. 45), Kel. Karadenan, Kec. Cibinong, Kab. Bogor, Jawa Barat 16913</span>
+              </div>
+              <div class="flex justify-between border-t border-slate-800/80 pt-1.5">
+                <span class="text-slate-400">🌐 Website Resmi:</span>
+                <a href="http://www.smk-bnb.sch.id" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:underline">www.smk-bnb.sch.id</a>
+              </div>
+              <div class="flex justify-between border-t border-slate-800/80 pt-1.5">
+                <span class="text-slate-400">📧 Email Resmi:</span>
+                <span class="text-purple-300">info@smk-bnb.sch.id / smkbnb13@gmail.com</span>
+              </div>
+            </div>
+
+            <!-- 3 Jurusan Unggulan Grid -->
+            <div>
+              <h4 class="font-heading font-bold text-xs text-slate-300 uppercase tracking-wider mb-2">3 Program Keahlian / Jurusan Unggulan:</h4>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 font-mono text-xs text-slate-300">
+                <div class="p-3 rounded-xl bg-cyan-950/30 border border-cyan-500/40">
+                  <div class="text-cyan-300 font-bold mb-1">1. TEKNIK KOMPUTER &amp; JARINGAN (TKJ)</div>
+                  <div class="text-slate-400 text-[11px]">Jurusan Monic: Jaringan Mikrotik/Cisco, administrasi server Linux, fiber optic, dan teknologi digital.</div>
+                </div>
+                <div class="p-3 rounded-xl bg-purple-950/30 border border-purple-500/40">
+                  <div class="text-purple-300 font-bold mb-1">2. AKUNTANSI &amp; KEUANGAN (AKL)</div>
+                  <div class="text-slate-400 text-[11px]">Pembukuan digital, perpajakan, audit perbankan, dan sistem keuangan modern.</div>
+                </div>
+                <div class="p-3 rounded-xl bg-red-950/30 border border-red-500/40">
+                  <div class="text-red-300 font-bold mb-1">3. TEKNIK OTOMOTIF (TKRO)</div>
+                  <div class="text-slate-400 text-[11px]">Mekanik kendaraan ringan, sistem injeksi EFI, kelistrikan bodi, dan servis industri.</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Clickable Links for SMK Bangun Nusa Bangsa -->
+            <div class="flex flex-wrap items-center gap-3 pt-2">
+              <a href="http://www.smk-bnb.sch.id" target="_blank" rel="noopener noreferrer" class="btn-venom-primary kelindes-trigger text-xs py-2.5 px-4 font-heading">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+                Portal Resmi smk-bnb.sch.id
+              </a>
+
+              <a href="https://maps.google.com/?q=SMK+Bangun+Nusa+Bangsa+Cibinong" target="_blank" rel="noopener noreferrer" class="btn-venom-ghost kelindes-trigger text-xs py-2.5 px-4 font-heading border-cyan-500/40 text-cyan-300 hover:border-cyan-400">
+                <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                Navigasi Google Maps Cibinong
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Student Status Badge & Facility Highlights -->
+          <div class="lg:col-span-4 space-y-4">
+            <div class="flex flex-col items-center justify-center p-6 rounded-2xl bg-gradient-to-b from-slate-900 to-black border border-cyan-500/30 text-center space-y-3">
+              <div class="w-20 h-20 rounded-full border-2 border-cyan-400 p-1 flex items-center justify-center shadow-[0_0_20px_rgba(0,240,255,0.4)]">
+                <span class="font-heading font-black text-2xl text-cyan-300">12</span>
+              </div>
+              <div class="font-heading font-bold text-lg text-white">KELAS 12 TKJ</div>
+              <p class="text-xs text-slate-400 font-mono">Angkatan Aktif • SMK Bangun Nusa Bangsa</p>
+              <div class="px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs font-mono font-bold">
+                STATUS: SISWA AKTIF BERPRESTASI
+              </div>
+            </div>
+
+            <!-- Facilities Mini Card -->
+            <div class="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-2 text-xs font-mono">
+              <div class="text-cyan-400 font-bold font-heading text-[11px]">🏢 FASILITAS LAB &amp; BELAJAR:</div>
+              <ul class="space-y-1.5 text-slate-300 text-[11px]">
+                <li class="flex items-center gap-1.5"><span class="text-cyan-400">✓</span> Lab Komputer TKJ dengan PC Core i7</li>
+                <li class="flex items-center gap-1.5"><span class="text-cyan-400">✓</span> Rack Server &amp; Routerboard Mikrotik</li>
+                <li class="flex items-center gap-1.5"><span class="text-cyan-400">✓</span> Peralatan Splicing Fiber Optic &amp; VFL</li>
+                <li class="flex items-center gap-1.5"><span class="text-cyan-400">✓</span> Proyektor/LCD TV &amp; AC di tiap kelas</li>
+                <li class="flex items-center gap-1.5"><span class="text-cyan-400">✓</span> Gedung bertingkat milik sendiri</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 6: AI DIGITAL HUB & INTERACTIVE MIKROTIK TERMINAL / WEB SERVER
+       ======================================================================== -->
+  <section id="ai-digital-hub" class="py-16 px-4 lg:px-10 bg-[#06070a] border-t border-cyan-500/10 relative">
+    <div class="max-w-7xl mx-auto space-y-12">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-950/60 border border-purple-500/40 text-purple-300 font-mono text-xs">
+          <span>06 // INTERAKTIF AI DIGITAL &amp; COMMAND CENTER</span>
+        </div>
+        <h2 class="text-2xl sm:text-4xl font-heading font-black text-white">
+          AI DIGITAL <span class="text-cyan-400 glow-cyan">TKJ LAB</span> &amp; SIMULATOR
+        </h2>
+        <p class="text-slate-400 text-sm">
+          Coba langsung perintah Mikrotik RouterOS Monic, pantau metrik real-time Web Server Nginx, serta visualisasi topologi jaringan symbiote!
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left: Interactive Mikrotik Terminal Simulator -->
+        <div class="lg:col-span-7 space-y-4">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="w-3 h-3 rounded-full bg-red-500"></span>
+              <span class="w-3 h-3 rounded-full bg-yellow-500"></span>
+              <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
+              <span class="font-mono text-xs text-slate-400 ml-2">RouterOS v7.14.3 (SMK-BNB-Mikrotik)</span>
+            </div>
+            <span class="text-[11px] font-mono text-cyan-400 font-semibold">TERMINAL SIMULATOR</span>
+          </div>
+
+          <div class="terminal-box">
+            <div class="terminal-header flex items-center justify-between text-xs font-mono text-slate-400">
+              <span>Terminal Winbox: monic@SMK-BNB-CoreRouter</span>
+              <span class="text-emerald-400 flex items-center gap-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> ONLINE
+              </span>
+            </div>
+
+            <!-- Terminal Output Window -->
+            <div id="terminal-output" class="terminal-body font-mono">
+              <div class="text-slate-400 text-xs mb-2">
+                =======================================================<br/>
+                 MikroTik RouterOS 7.14.3 (c) 1994-2026<br/>
+                 Host: MONICA KARTIKA INDAH RIYANTI (MONIC)<br/>
+                 Lab TKJ SMK Bangun Nusa Bangsa &bull; We Are Venom<br/>
+                =======================================================<br/>
+                Ketik <span class="text-cyan-400 font-bold">help</span> untuk melihat daftar perintah, atau klik tombol cepat di bawah:
+              </div>
+            </div>
+
+            <!-- Terminal Input Line -->
+            <div class="terminal-input-row font-mono text-xs">
+              <span class="text-cyan-400 font-bold mr-2">[monic@SMK-BNB] &gt;</span>
+              <input type="text" id="terminal-input" placeholder="Ketik perintah (contoh: ip address print)..." class="bg-transparent border-none outline-none text-white w-full font-mono text-xs" autocomplete="off" spellcheck="false">
+            </div>
+          </div>
+
+          <!-- Quick Command Chips -->
+          <div class="flex flex-wrap items-center gap-1.5 pt-1">
+            <span class="text-xs font-mono text-slate-400 mr-1">Perintah Cepat:</span>
+            <button class="terminal-quick-cmd kelindes-trigger px-2.5 py-1 rounded bg-slate-900 border border-slate-700 hover:border-cyan-400 text-cyan-300 text-[11px] font-mono" data-cmd="ip address print">/ip address print</button>
+            <button class="terminal-quick-cmd kelindes-trigger px-2.5 py-1 rounded bg-slate-900 border border-slate-700 hover:border-cyan-400 text-cyan-300 text-[11px] font-mono" data-cmd="queue simple print">/queue simple print</button>
+            <button class="terminal-quick-cmd kelindes-trigger px-2.5 py-1 rounded bg-slate-900 border border-slate-700 hover:border-cyan-400 text-cyan-300 text-[11px] font-mono" data-cmd="system resource print">/system resource print</button>
+            <button class="terminal-quick-cmd kelindes-trigger px-2.5 py-1 rounded bg-slate-900 border border-slate-700 hover:border-cyan-400 text-cyan-300 text-[11px] font-mono" data-cmd="ping 8.8.8.8">/ping 8.8.8.8</button>
+            <button class="terminal-quick-cmd kelindes-trigger px-2.5 py-1 rounded bg-slate-900 border border-purple-700 hover:border-purple-400 text-purple-300 text-[11px] font-mono" data-cmd="venom status">/venom status</button>
+          </div>
+        </div>
+
+        <!-- Right: Live Web Server & AI Security Monitor -->
+        <div class="lg:col-span-5 space-y-4">
+          <div class="flex items-center justify-between">
+            <span class="font-mono text-xs text-slate-400">Web Server &amp; AI Security Telemetry</span>
+            <span class="text-[11px] font-mono text-purple-400 font-semibold">LIVE MONITOR</span>
+          </div>
+
+          <div class="glass-panel p-5 rounded-2xl border border-cyan-500/20 space-y-5">
+            
+            <!-- Web Server State -->
+            <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+              <div>
+                <h4 class="font-heading font-bold text-sm text-white flex items-center gap-2">
+                  <span>Nginx Production Web Server</span>
+                </h4>
+                <p class="text-[11px] text-slate-400 font-mono">Ubuntu 22.04 LTS • Port 80 &amp; 443 (SSL/TLS)</p>
+              </div>
+              <span class="px-2.5 py-1 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 font-mono text-[11px] font-bold">
+                HTTP 200 OK
+              </span>
+            </div>
+
+            <!-- CPU Gauge -->
+            <div>
+              <div class="flex justify-between text-xs font-mono mb-1">
+                <span class="text-slate-300">Server CPU Load (Dynamic):</span>
+                <span id="metric-cpu-text" class="text-cyan-400 font-bold">12%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-slate-900 overflow-hidden">
+                <div id="metric-cpu-bar" class="h-full bg-cyan-400 transition-all duration-700 rounded-full" style="width: 36%"></div>
+              </div>
+            </div>
+
+            <!-- Memory & Uptime -->
+            <div class="grid grid-cols-2 gap-3 font-mono text-xs">
+              <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
+                <div class="text-slate-400 text-[11px]">RAM Allocation:</div>
+                <div id="metric-ram-text" class="text-white font-bold mt-0.5">428 MB / 1024 MB</div>
+              </div>
+              <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
+                <div class="text-slate-400 text-[11px]">Processed Reqs:</div>
+                <div id="metric-req-text" class="text-cyan-300 font-bold mt-0.5">14,285 reqs</div>
+              </div>
+            </div>
+
+            <!-- Symbiote AI Security Scanner -->
+            <div class="p-3.5 rounded-xl bg-gradient-to-r from-purple-950/40 to-slate-900 border border-purple-500/30 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-lg bg-purple-500/20 border border-purple-400 flex items-center justify-center text-purple-300 font-bold">
+                🛡️
+              </div>
+              <div>
+                <div class="font-heading font-bold text-xs text-white">Symbiote AI Shield Defense</div>
+                <div class="text-[11px] text-purple-300 font-mono">DDoS Mitigation &amp; Firewall NAT Protected</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="py-12 px-4 lg:px-10 bg-[#040508] border-t border-cyan-500/20 relative z-10 text-center space-y-4">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      
+      <!-- Brand & Copyright -->
+      <div class="text-left space-y-1">
+        <div class="font-heading font-black text-sm tracking-wider text-white flex items-center gap-2">
+          <span>MONICA KARTIKA INDAH RIYANTI</span>
+          <span class="text-cyan-400">|</span>
+          <span class="text-xs text-cyan-300 font-mono">MONIC</span>
+        </div>
+        <p class="text-xs text-slate-400 font-mono">
+          Kelas 12 TKJ • SMK Bangun Nusa Bangsa • Marvel Venom Symbiote Hub
+        </p>
+      </div>
+
+      <!-- Quick Footer Links -->
+      <div class="flex items-center gap-4 text-xs font-mono text-slate-400">
+        <a href="#about" class="hover:text-cyan-400 kelindes-trigger transition-colors">Biodata</a>
+        <span>&bull;</span>
+        <a href="#tkj-skills" class="hover:text-cyan-400 kelindes-trigger transition-colors">Mikrotik</a>
+        <span>&bull;</span>
+        <a href="#internship-pkl" class="hover:text-cyan-400 kelindes-trigger transition-colors">PT Dwi Prima</a>
+        <span>&bull;</span>
+        <a href="#school-smk" class="hover:text-cyan-400 kelindes-trigger transition-colors">SMK BNB</a>
+      </div>
+
+      <div class="text-xs text-slate-500 font-mono">
+        &copy; 2026 Monica Kartika Indah Riyanti. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       CHIBI VENOM BERJALAN (WALKING CHIBI COMPANION)
+       Walks across the bottom of the viewport, flips direction, interactive!
+       ======================================================================== -->
+  <div id="chibi-venom-companion" title="Klik Chibi Venom untuk mendengarkan suaranya!">
+    
+    <!-- Speech bubble floating above chibi -->
+    <div id="chibi-speech-bubble" class="chibi-speech-bubble font-mono">
+      WE ARE VENOM!
+    </div>
+
+    <div class="chibi-venom-body-wrap">
+      <svg viewBox="0 0 100 110" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="chibiSkin" cx="50%" cy="35%" r="65%">
+            <stop offset="0%" stop-color="#1e1b4b" />
+            <stop offset="70%" stop-color="#0a0a14" />
+            <stop offset="100%" stop-color="#000000" />
+          </radialGradient>
+        </defs>
+
+        <!-- Cute Chibi Left Leg -->
+        <g class="chibi-leg-left">
+          <ellipse cx="32" cy="98" rx="8" ry="6" fill="#050508" stroke="#00f0ff" stroke-width="1.2"/>
+          <polygon points="26,98 28,103 31,98 33,103 36,98" fill="#fff"/>
+        </g>
+
+        <!-- Cute Chibi Right Leg -->
+        <g class="chibi-leg-right">
+          <ellipse cx="68" cy="98" rx="8" ry="6" fill="#050508" stroke="#00f0ff" stroke-width="1.2"/>
+          <polygon points="62,98 64,103 67,98 69,103 72,98" fill="#fff"/>
+        </g>
+
+        <!-- Cute Chibi Body with Spider Emblem -->
+        <ellipse cx="50" cy="78" rx="22" ry="18" fill="url(#chibiSkin)" stroke="#9333ea" stroke-width="1.5"/>
+        <!-- White Spider Symbiote Chest Mark -->
+        <path d="M 50,66 L 44,76 L 50,72 L 56,76 Z M 44,72 L 35,70 M 56,72 L 65,70 M 44,76 L 36,82 M 56,76 L 64,82" stroke="#ffffff" stroke-width="1.5" fill="#ffffff"/>
+
+        <!-- Little Arms -->
+        <ellipse cx="24" cy="74" rx="6" ry="10" fill="#050508" stroke="#00f0ff" stroke-width="1" transform="rotate(15 24 74)"/>
+        <ellipse cx="76" cy="74" rx="6" ry="10" fill="#050508" stroke="#00f0ff" stroke-width="1" transform="rotate(-15 76 74)"/>
+
+        <!-- Cute Big Chibi Head -->
+        <ellipse cx="50" cy="40" rx="34" ry="30" fill="url(#chibiSkin)" stroke="#00f0ff" stroke-width="2"/>
+
+        <!-- Big Expressive Chibi Venom Eyes -->
+        <g class="chibi-eye-white">
+          <path d="M 24,26 C 32,22 46,38 40,48 C 32,50 20,40 24,26 Z" fill="#ffffff" filter="drop-shadow(0 0 5px #00f0ff)"/>
+          <path d="M 76,26 C 68,22 54,38 60,48 C 68,50 80,40 76,26 Z" fill="#ffffff" filter="drop-shadow(0 0 5px #00f0ff)"/>
+        </g>
+
+        <!-- Sharp Cute Tooth Grin -->
+        <path d="M 30,52 Q 50,68 70,52 Q 50,56 30,52 Z" fill="#3f0713" stroke="#ef4444" stroke-width="1"/>
+        <polygon points="34,53 37,59 40,53 44,60 48,54 52,60 56,54 60,60 63,53 66,58" fill="#ffffff"/>
+
+        <!-- Slithering Chibi Tongue -->
+        <g class="chibi-tongue">
+          <path d="M 48,56 C 42,70 28,72 20,80 C 26,84 46,74 54,60 Z" fill="#f43f5e" stroke="#fb7185" stroke-width="1"/>
+          <circle cx="21" cy="80" r="2.5" fill="#10b981"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Companion Controls Float Button Strip -->
+  <div class="fixed bottom-3 left-3 z-30 flex flex-wrap items-center gap-2">
+    <button id="chibi-mode-toggle-btn" onclick="window.toggleChibiMode()" class="px-2.5 py-1 rounded-full bg-slate-900/90 border border-cyan-400/40 text-[10px] font-mono text-cyan-300 shadow-lg hover:border-cyan-300 transition-all flex items-center gap-1 kelindes-trigger">
+      <span>Mode: Patroli Bebas</span>
+    </button>
+    
+    <!-- Camera Face Tracking Toggle Button as requested -->
+    <button id="face-tracking-toggle-btn" onclick="window.toggleFaceTracking()" class="px-2.5 py-1 rounded-full bg-slate-900/90 border border-purple-500/60 text-[10px] font-mono text-purple-300 shadow-lg hover:border-purple-300 transition-all flex items-center gap-1 kelindes-trigger">
+      <span class="w-1.5 h-1.5 rounded-full bg-purple-400 animate-pulse"></span>
+      <span id="face-tracking-btn-label">📷 Sensor Kamera Muka: OFF</span>
+    </button>
+  </div>
+
+  <!-- Mini Cyber Camera HUD Widget for Face Tracking (Following Head Movements) -->
+  <div id="face-tracking-hud" class="hidden fixed bottom-14 left-3 z-40 p-2.5 rounded-2xl bg-slate-950/95 border border-cyan-400/80 shadow-[0_0_25px_rgba(0,240,255,0.4)] backdrop-blur-xl w-52 space-y-2">
+    <div class="flex items-center justify-between text-[10px] font-mono border-b border-slate-800 pb-1.5">
+      <span class="text-cyan-300 font-bold flex items-center gap-1.5">
+        <span class="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
+        SENSOR MUKA SYMBIOTE
+      </span>
+      <button onclick="window.toggleFaceTracking()" class="text-slate-400 hover:text-white px-1">✕</button>
+    </div>
+    
+    <!-- Video & Canvas Tracking Overlay -->
+    <div class="relative w-full h-28 rounded-lg overflow-hidden bg-black border border-cyan-500/40">
+      <video id="face-tracking-video" autoplay playsinline muted class="w-full h-full object-cover transform -scale-x-100"></video>
+      <canvas id="face-tracking-canvas" class="absolute inset-0 w-full h-full pointer-events-none"></canvas>
+      <div id="face-tracking-crosshair" class="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <div class="w-12 h-12 border border-dashed border-cyan-400/70 rounded-full animate-pulse flex items-center justify-center text-[9px] text-cyan-300 font-mono">
+          ◉
+        </div>
+      </div>
+    </div>
+
+    <!-- Real-time Direction Status Indicator -->
+    <div class="text-center font-mono">
+      <div id="face-direction-text" class="text-[11px] font-bold text-cyan-300 tracking-wider">SIAP MELACAK MUKA...</div>
+      <p class="text-[9px] text-slate-400 mt-0.5 leading-tight">Muka ke kanan &rarr; Venom ke kanan.<br/>Muka ke kiri &rarr; Venom ke kiri!</p>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       ASISTEN AI VENOM BERWAJAH MANUSIA (CHIBI HALF MONIC / HALF VENOM)
+       Interactive Floating Widget with Smart Greetings & Indonesian Voice
+       ======================================================================== -->
+  <div class="ai-assistant-widget">
+    
+    <!-- Initial Greeting Bubble (Appears on Load) -->
+    <div id="ai-greeting-bubble" class="hidden max-w-xs p-3.5 mb-3 rounded-2xl bg-slate-900/95 border border-cyan-400 text-xs shadow-2xl space-y-1.5 animate-bounce">
+      <div class="flex items-center justify-between font-heading font-bold text-cyan-300 text-[11px]">
+        <span>HAI! SAYA ASISTEN VENOM</span>
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+      </div>
+      <p class="text-slate-200 text-xs leading-relaxed">
+        Selamat datang di Website Symbiote Tech Hub Monica (Monic)! Klik avatar saya untuk bertanya seputar Mikrotik, PKL, SMK Bangun Nusa Bangsa, atau info terkini!
+      </p>
+    </div>
+
+    <!-- AI Chat Window -->
+    <div id="ai-chat-window" class="ai-chat-window hidden">
+      
+      <!-- Window Header -->
+      <div class="p-3.5 bg-slate-900/90 border-b border-cyan-500/20 flex items-center justify-between">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-full border border-cyan-400 bg-black flex items-center justify-center text-xs font-bold font-heading text-cyan-400">
+            AV
+          </div>
+          <div>
+            <div class="flex items-center gap-1.5">
+              <h4 class="font-heading font-bold text-xs text-white">ASISTEN VENOM</h4>
+              <span id="grounding-status-pill" class="text-[9px] font-mono px-1.5 py-0.2 rounded bg-cyan-950/80 border border-cyan-500/40 text-cyan-300">🔍 Google Grounding</span>
+            </div>
+            <p class="text-[10px] text-cyan-300 font-mono">Asisten AI Digital &bull; Real-Time Search</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-1">
+          <button id="ai-settings-toggle-btn" class="p-1 rounded text-slate-400 hover:text-cyan-300 text-xs" title="Konfigurasi API Key & Grounding">⚙️</button>
+          <button id="ai-close-btn" class="p-1 rounded text-slate-400 hover:text-white" title="Tutup Chat">✕</button>
+        </div>
+      </div>
+
+      <!-- Collapsible API Key Settings Drawer -->
+      <div id="ai-settings-drawer" class="hidden p-2.5 bg-slate-950 border-b border-cyan-500/20 font-mono text-[11px] space-y-1.5">
+        <div class="flex items-center justify-between text-slate-300">
+          <span>Gemini API Key (Google AI Studio):</span>
+          <button id="save-api-key-btn" class="text-cyan-400 hover:underline">Simpan</button>
+        </div>
+        <input type="password" id="custom-gemini-key" placeholder="AIzaSy... (atau simpan di server .env)" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-2 py-1 text-white text-[10px] outline-none focus:border-cyan-400">
+        <div class="text-[9px] text-slate-400">Google Search Grounding aktif otomatis untuk pencarian berita &amp; fakta real-time.</div>
+      </div>
+
+      <!-- Messages Stream -->
+      <div id="ai-messages-container" class="flex-1 p-3.5 overflow-y-auto font-body space-y-3">
+        <!-- Initial Message -->
+        <div class="flex gap-2.5 justify-start">
+          <div class="w-8 h-8 rounded-full flex-shrink-0 border border-cyan-400 bg-slate-900 flex items-center justify-center text-xs text-cyan-400 font-bold">
+            AV
+          </div>
+          <div class="max-w-[85%] bg-slate-900/90 border border-cyan-500/30 rounded-2xl rounded-tl-sm p-3 text-xs leading-relaxed text-slate-200 shadow-lg">
+            <div class="font-bold text-cyan-300 mb-1 flex items-center gap-1.5 font-heading text-[11px]">
+              <span>ASISTEN VENOM</span>
+              <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
+            </div>
+            Halo para tamu! Saya adalah Asisten Venom (asisten AI digital portofolio Monic). Saya dibekali penalaran cerdas, informasi lengkap sekolah SMK Bangun Nusa Bangsa, Mikrotik, dan akses real-time ke ekosistem Google! Silakan tanyakan apapun atau gunakan tombol cepat di bawah.
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Suggested Query Chips -->
+      <div class="p-2.5 bg-slate-950/80 border-t border-slate-800 flex flex-wrap gap-1.5">
+        <button class="ai-quick-query text-[10px] font-mono px-2 py-1 rounded bg-slate-900 border border-cyan-500/30 text-cyan-300 hover:border-cyan-400" data-query="monic">Siapa Monic?</button>
+        <button class="ai-quick-query text-[10px] font-mono px-2 py-1 rounded bg-slate-900 border border-cyan-500/30 text-cyan-300 hover:border-cyan-400" data-query="tkj">Keahlian TKJ &amp; Mikrotik</button>
+        <button class="ai-quick-query text-[10px] font-mono px-2 py-1 rounded bg-slate-900 border border-red-500/30 text-red-300 hover:border-red-400" data-query="pkl">PKL PT Dwi Prima (80%)</button>
+        <button class="ai-quick-query text-[10px] font-mono px-2 py-1 rounded bg-slate-900 border border-purple-500/30 text-purple-300 hover:border-purple-400" data-query="smk">Info Lengkap SMK BNB</button>
+        <button class="ai-quick-query text-[10px] font-mono px-2 py-1 rounded bg-slate-900 border border-emerald-500/30 text-emerald-300 hover:border-emerald-400" data-query="desain">Editor &amp; Desain</button>
+        <button class="ai-quick-query text-[10px] font-mono px-2 py-1 rounded bg-cyan-950/70 border border-cyan-400/50 text-cyan-200 hover:border-cyan-300" data-query="google_search">🔍 Cari Berita IT Terkini</button>
+        <button class="ai-quick-query text-[10px] font-mono px-2 py-1 rounded bg-red-950/70 border border-red-400/50 text-red-200 hover:border-red-300" data-query="google_maps">🗺️ Maps Rute SMK BNB</button>
+      </div>
+
+      <!-- Chat Input Field -->
+      <div class="p-2.5 bg-slate-900 border-t border-cyan-500/20 flex items-center gap-2">
+        <input type="text" id="ai-user-input" placeholder="Tanyakan apapun ke Asisten Venom..." class="flex-1 bg-slate-950 border border-slate-700 rounded-xl px-3 py-1.5 text-xs text-white outline-none focus:border-cyan-400">
+        <button id="ai-send-btn" class="p-2 rounded-xl bg-cyan-500 text-black font-bold hover:bg-cyan-400 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- AI Avatar Button (Half Monic Chibi / Half Venom Face) -->
+    <button id="ai-avatar-toggle" class="ai-avatar-btn kelindes-trigger" title="Buka Asisten Venom">
+      <div class="pulse-ring"></div>
+      
+      <!-- Custom Half-Monic Human Chibi / Half-Venom Face SVG -->
+      <svg viewBox="0 0 100 100" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <clipPath id="leftHalfClip">
+            <rect x="0" y="0" width="50" height="100"/>
+          </clipPath>
+          <clipPath id="rightHalfClip">
+            <rect x="50" y="0" width="50" height="100"/>
+          </clipPath>
+        </defs>
+
+        <!-- ====== LEFT HALF: CUTE CHIBI MONIC (HUMAN FACE) ====== -->
+        <g clip-path="url(#leftHalfClip)">
+          <!-- Warm Peach Skin -->
+          <ellipse cx="50" cy="50" rx="38" ry="38" fill="#fed7aa"/>
+          
+          <!-- Cute Hair (Dark Brown / Black anime fringe) -->
+          <path d="M 12,48 C 12,20 30,12 50,12 L 50,45 C 40,30 25,35 12,48 Z" fill="#292524"/>
+          <!-- Anime Bangs Side Hair -->
+          <path d="M 12,40 C 14,55 18,65 24,70 C 20,55 18,45 14,40 Z" fill="#1c1917"/>
+
+          <!-- Cute Big Anime Human Eye -->
+          <ellipse cx="32" cy="48" rx="8" ry="11" fill="#451a03"/>
+          <ellipse cx="33" cy="49" rx="6" ry="8" fill="#78350f"/>
+          <!-- Big Anime Eye Highlights -->
+          <circle cx="30" cy="44" r="3" fill="#ffffff"/>
+          <circle cx="35" cy="52" r="1.5" fill="#ffffff"/>
+
+          <!-- Sweet Smile -->
+          <path d="M 38,68 Q 45,74 50,71" stroke="#be123c" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <!-- Cute Blush -->
+          <ellipse cx="26" cy="58" rx="5" ry="3" fill="#f43f5e" opacity="0.4"/>
+        </g>
+
+        <!-- ====== RIGHT HALF: FEROCIOUS VENOM CHIBI (SYMBIOTE) ====== -->
+        <g clip-path="url(#rightHalfClip)">
+          <!-- Jet Black Symbiote Skin -->
+          <ellipse cx="50" cy="50" rx="38" ry="38" fill="#090a12" stroke="#00f0ff" stroke-width="2"/>
+          
+          <!-- Sharp White Venom Eye with Cyan Glow -->
+          <path d="M 62,35 C 72,30 88,44 82,56 C 72,58 60,48 62,35 Z" fill="#ffffff" filter="drop-shadow(0 0 4px #00f0ff)"/>
+          
+          <!-- Jagged Razor Teeth Smile -->
+          <path d="M 50,71 Q 65,78 82,62 Q 65,65 50,71 Z" fill="#3f0713" stroke="#ef4444" stroke-width="1.5"/>
+          <polygon points="54,69 57,74 61,68 65,75 69,67 73,74 77,66" fill="#ffffff"/>
+
+          <!-- Venom Symbiote Tendrils climbing up -->
+          <path d="M 50,14 Q 54,25 60,30" stroke="#00f0ff" stroke-width="2" fill="none"/>
+          <path d="M 50,85 Q 56,92 64,88" stroke="#9333ea" stroke-width="2" fill="none"/>
+        </g>
+
+        <!-- Center Dynamic Dividing Symbiote Tendril Line -->
+        <path d="M 50,12 Q 48,30 52,50 Q 47,70 50,88" stroke="#00f0ff" stroke-width="2.5" fill="none" filter="drop-shadow(0 0 4px #00f0ff)"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- ========================================================================
+       SYMBIOTE TKJ NETWORK & SERVER REPOSITORY DATABASE MODAL
+       Menggantikan menu login dengan Database Perangkat, IP Address & Topologi TKJ
+       ======================================================================== -->
+  <div id="symbiote-database-modal" class="modal-backdrop">
+    <div class="modal-card max-w-2xl p-6 sm:p-7 space-y-5">
+      
+      <!-- Modal Header -->
+      <div class="flex items-center justify-between border-b border-cyan-500/20 pb-3.5">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-cyan-500/20 border border-cyan-400 flex items-center justify-center text-cyan-300 shadow-[0_0_15px_rgba(0,240,255,0.3)]">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2 1.5 3 3.5 3h9c2 0 3.5-1 3.5-3V7c0-2-1.5-3-3.5-3h-9C5.5 4 4 5 4 7zm0 5h16M9 4v16" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-heading font-black text-base text-white flex items-center gap-2">
+              <span>DATABASE JARINGAN &amp; SERVER LAB TKJ</span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">LIVE REPOSITORY</span>
+            </h3>
+            <p class="text-[11px] text-cyan-300 font-mono">Repositori Node, IP Address, Routing, &amp; Status Server Monic</p>
+          </div>
+        </div>
+        <button id="close-db-btn" class="p-1 rounded text-slate-400 hover:text-white text-base">✕</button>
+      </div>
+
+      <!-- Quick Filter & Search Bar -->
+      <div class="space-y-2.5">
+        <div class="relative">
+          <input type="text" id="db-search-input" placeholder="🔍 Cari perangkat / IP / service... (contoh: 192.168, Nginx, VLAN)" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3.5 py-2 text-xs text-white outline-none focus:border-cyan-400 font-mono">
+        </div>
+
+        <div class="flex flex-wrap items-center gap-1.5 font-mono text-[10px]">
+          <span class="text-slate-400 mr-1">Filter Kategori:</span>
+          <button class="db-filter-btn px-2.5 py-1 rounded bg-cyan-500 text-black font-bold" data-filter="all">Semua Node (6)</button>
+          <button class="db-filter-btn px-2.5 py-1 rounded bg-slate-900 border border-slate-700 text-slate-300 hover:border-cyan-400" data-filter="router">Router Core</button>
+          <button class="db-filter-btn px-2.5 py-1 rounded bg-slate-900 border border-slate-700 text-slate-300 hover:border-cyan-400" data-filter="server">Web Server &amp; DNS</button>
+          <button class="db-filter-btn px-2.5 py-1 rounded bg-slate-900 border border-slate-700 text-slate-300 hover:border-cyan-400" data-filter="switch">Switch &amp; VLAN</button>
+          <button class="db-filter-btn px-2.5 py-1 rounded bg-slate-900 border border-slate-700 text-slate-300 hover:border-cyan-400" data-filter="client">Client &amp; Hotspot</button>
+        </div>
+      </div>
+
+      <!-- Device Database Table (Scrollable) -->
+      <div class="max-h-72 overflow-y-auto space-y-2 pr-1 font-mono text-xs">
+        
+        <!-- Node 1: Mikrotik RB4011 -->
+        <div class="db-row p-3 rounded-xl bg-slate-900/90 border border-cyan-500/30 hover:border-cyan-400 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-2" data-category="router" data-search="mikrotik router rb4011 192.168.1.180 10.20.30.1 ospf">
+          <div class="space-y-0.5">
+            <div class="flex items-center gap-2">
+              <span class="font-bold text-white">MikroTik RB4011iGS+ Core Router</span>
+              <span class="text-[9px] px-1.5 py-0.2 rounded bg-cyan-500/20 text-cyan-300 border border-cyan-400/30">ROUTER</span>
+            </div>
+            <div class="text-[11px] text-cyan-300">WAN: 192.168.1.180/24 &bull; LAN: 10.20.30.1/24 (Gateway)</div>
+            <div class="text-[10px] text-slate-400">Protokol: OSPF v2 &bull; Bandwidth Queue Tree 100M &bull; NAT Masquerade</div>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 text-[10px] font-bold border border-emerald-500/40">ONLINE</span>
+            <button class="db-copy-ip-btn px-2 py-1 rounded bg-slate-800 text-slate-200 hover:text-cyan-300 text-[10px]" data-ip="192.168.1.180" title="Salin IP">Salin IP</button>
+          </div>
+        </div>
+
+        <!-- Node 2: Production Web Server Nginx -->
+        <div class="db-row p-3 rounded-xl bg-slate-900/90 border border-purple-500/30 hover:border-purple-400 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-2" data-category="server" data-search="nginx web server ubuntu 172.16.10.80 ssl tls https 80 443">
+          <div class="space-y-0.5">
+            <div class="flex items-center gap-2">
+              <span class="font-bold text-white">Production Web Server (Nginx Ubuntu 22.04)</span>
+              <span class="text-[9px] px-1.5 py-0.2 rounded bg-purple-500/20 text-purple-300 border border-purple-400/30">SERVER</span>
+            </div>
+            <div class="text-[11px] text-purple-300">IP: 172.16.10.80/24 &bull; Ports: 80 (HTTP), 443 (HTTPS TLS 1.3)</div>
+            <div class="text-[10px] text-slate-400">Let's Encrypt SSL &bull; MariaDB Database &bull; Uptime: 42 Hari</div>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 text-[10px] font-bold border border-emerald-500/40">RUNNING</span>
+            <button class="db-copy-ip-btn px-2 py-1 rounded bg-slate-800 text-slate-200 hover:text-cyan-300 text-[10px]" data-ip="172.16.10.80" title="Salin IP">Salin IP</button>
+          </div>
+        </div>
+
+        <!-- Node 3: BIND9 DNS Server -->
+        <div class="db-row p-3 rounded-xl bg-slate-900/90 border border-slate-800 hover:border-cyan-400 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-2" data-category="server" data-search="bind9 dns server 10.20.30.2 smk-bnb.sch.id">
+          <div class="space-y-0.5">
+            <div class="flex items-center gap-2">
+              <span class="font-bold text-white">BIND9 DNS Server (Domain Resolver)</span>
+              <span class="text-[9px] px-1.5 py-0.2 rounded bg-purple-500/20 text-purple-300 border border-purple-400/30">DNS</span>
+            </div>
+            <div class="text-[11px] text-cyan-300">IP: 10.20.30.2/24 &bull; Zone: smk-bnb.sch.id &bull; Forwarder: 8.8.8.8</div>
+            <div class="text-[10px] text-slate-400">Resolusi Nama Internal Lab TKJ SMK Bangun Nusa Bangsa</div>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 text-[10px] font-bold border border-emerald-500/40">ACTIVE</span>
+            <button class="db-copy-ip-btn px-2 py-1 rounded bg-slate-800 text-slate-200 hover:text-cyan-300 text-[10px]" data-ip="10.20.30.2" title="Salin IP">Salin IP</button>
+          </div>
+        </div>
+
+        <!-- Node 4: Managed Switch Distribution -->
+        <div class="db-row p-3 rounded-xl bg-slate-900/90 border border-slate-800 hover:border-cyan-400 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-2" data-category="switch" data-search="switch managed cisco 10.20.30.254 vlan trunking 10 20 30">
+          <div class="space-y-0.5">
+            <div class="flex items-center gap-2">
+              <span class="font-bold text-white">Distribution Managed Switch 24-Port</span>
+              <span class="text-[9px] px-1.5 py-0.2 rounded bg-cyan-500/20 text-cyan-300 border border-cyan-400/30">SWITCH</span>
+            </div>
+            <div class="text-[11px] text-cyan-300">IP Manajemen: 10.20.30.254/24 &bull; 802.1Q VLAN Trunk</div>
+            <div class="text-[10px] text-slate-400">VLAN 10: Servers &bull; VLAN 20: Lab Siswa &bull; VLAN 30: WiFi AP</div>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 text-[10px] font-bold border border-emerald-500/40">CONNECTED</span>
+            <button class="db-copy-ip-btn px-2 py-1 rounded bg-slate-800 text-slate-200 hover:text-cyan-300 text-[10px]" data-ip="10.20.30.254" title="Salin IP">Salin IP</button>
+          </div>
+        </div>
+
+        <!-- Node 5: Hotspot Gateway Siswa SMK BNB -->
+        <div class="db-row p-3 rounded-xl bg-slate-900/90 border border-slate-800 hover:border-cyan-400 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-2" data-category="client" data-search="hotspot gateway wifi wlan 10.100.0.1 user manager qos">
+          <div class="space-y-0.5">
+            <div class="flex items-center gap-2">
+              <span class="font-bold text-white">Hotspot Gateway Siswa SMK BNB</span>
+              <span class="text-[9px] px-1.5 py-0.2 rounded bg-red-500/20 text-red-300 border border-red-400/30">HOTSPOT</span>
+            </div>
+            <div class="text-[11px] text-red-300">Subnet: 10.100.0.1/24 &bull; User Manager Radius Auth</div>
+            <div class="text-[10px] text-slate-400">Per-User Bandwidth Limit: 20 Mbps &bull; Captive Portal</div>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 text-[10px] font-bold border border-emerald-500/40">ACTIVE</span>
+            <button class="db-copy-ip-btn px-2 py-1 rounded bg-slate-800 text-slate-200 hover:text-cyan-300 text-[10px]" data-ip="10.100.0.1" title="Salin IP">Salin IP</button>
+          </div>
+        </div>
+
+        <!-- Node 6: Host Workstation Monic -->
+        <div class="db-row p-3 rounded-xl bg-slate-900/90 border border-emerald-500/30 hover:border-emerald-400 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-2" data-category="client" data-search="host monic workstation client pc 10.20.30.88 static lease">
+          <div class="space-y-0.5">
+            <div class="flex items-center gap-2">
+              <span class="font-bold text-white">PC Workstation Host Monic (Admin)</span>
+              <span class="text-[9px] px-1.5 py-0.2 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">HOST</span>
+            </div>
+            <div class="text-[11px] text-emerald-300">IP: 10.20.30.88/24 &bull; MAC: D4:5D:64:A1:B2:C3 (Static Lease)</div>
+            <div class="text-[10px] text-slate-400">Akses Penuh Winbox, SSH Terminal, &amp; FTP Root Deployer</div>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="px-2 py-0.5 rounded-full bg-cyan-500/20 text-cyan-300 text-[10px] font-bold border border-cyan-500/40">HOST LINKED</span>
+            <button class="db-copy-ip-btn px-2 py-1 rounded bg-slate-800 text-slate-200 hover:text-cyan-300 text-[10px]" data-ip="10.20.30.88" title="Salin IP">Salin IP</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Telemetry Status Footer -->
+      <div class="p-3 rounded-xl bg-slate-950 border border-cyan-500/20 flex flex-wrap items-center justify-between gap-2 text-[11px] font-mono text-slate-400">
+        <div>Total Node: <span class="text-white font-bold">6 Terverifikasi</span> &bull; Status: <span class="text-emerald-400 font-bold">100% Beroperasi</span></div>
+        <div class="text-cyan-400">Lab TKJ SMK Bangun Nusa Bangsa</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Application Script -->
+  <script src="app.js"></script>
+</body>
+</html>
