@@ -1,0 +1,609 @@
+/* ==========================================================================
+   VENOM X MONICA (MONIC) - TKJ & AI DIGITAL PORTFOLIO
+   High-Definition Symbiote Theme Stylesheet
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap');
+
+:root {
+  --color-bg: #07080c;
+  --color-bg-secondary: #0d0f17;
+  --color-bg-card: rgba(16, 20, 31, 0.75);
+  --color-border: rgba(0, 240, 255, 0.2);
+  --color-border-glow: rgba(0, 240, 255, 0.6);
+  --color-venom-black: #0a0b10;
+  --color-venom-purple: #9333ea;
+  --color-venom-magenta: #c026d3;
+  --color-venom-cyan: #00f0ff;
+  --color-venom-red: #ef4444;
+  --color-venom-slime: #10b981;
+  --color-text-main: #f1f5f9;
+  --color-text-muted: #94a3b8;
+  --font-heading: 'Orbitron', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --font-code: 'JetBrains Mono', monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text-main);
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  background: radial-gradient(circle at 50% 0%, #15102a 0%, #08090f 60%, #030406 100%);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #08090f;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--color-venom-purple), var(--color-venom-cyan));
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-venom-cyan);
+}
+
+/* Typography Utility */
+.font-heading {
+  font-family: var(--font-heading);
+}
+.font-code {
+  font-family: var(--font-code);
+}
+
+/* Symbiote Ambient Tendrils Background */
+.symbiote-grid-overlay {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+}
+
+.glow-cyan {
+  text-shadow: 0 0 10px rgba(0, 240, 255, 0.7), 0 0 25px rgba(0, 240, 255, 0.4);
+}
+.glow-purple {
+  text-shadow: 0 0 10px rgba(168, 85, 247, 0.7), 0 0 25px rgba(168, 85, 247, 0.4);
+}
+.glow-red {
+  text-shadow: 0 0 10px rgba(239, 68, 68, 0.8), 0 0 25px rgba(239, 68, 68, 0.4);
+}
+
+.box-glow-cyan {
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.25), inset 0 0 15px rgba(0, 240, 255, 0.1);
+}
+.box-glow-purple {
+  box-shadow: 0 0 25px rgba(147, 51, 234, 0.3), inset 0 0 15px rgba(147, 51, 234, 0.1);
+}
+
+/* Glassmorphism Card */
+.glass-panel {
+  background: var(--color-bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.glass-panel:hover {
+  border-color: rgba(0, 240, 255, 0.4);
+  box-shadow: 0 12px 40px 0 rgba(0, 240, 255, 0.15);
+}
+
+/* Symbiote Border Cut Corner */
+.cyber-clip {
+  clip-path: polygon(
+    0 12px, 
+    12px 0, 
+    calc(100% - 12px) 0, 
+    100% 12px, 
+    100% calc(100% - 12px), 
+    calc(100% - 12px) 100%, 
+    12px 100%, 
+    0 calc(100% - 12px)
+  );
+}
+
+/* ==========================================================================
+   EFEK KELINDES KEPALA VENOM (SQUASH & SPLAT ANIMATION)
+   Lightweight, pure CSS keyframes hardware-accelerated with zero lag!
+   ========================================================================== */
+
+.venom-kelindes-wrapper {
+  position: fixed;
+  pointer-events: none;
+  z-index: 999999;
+  width: 100px;
+  height: 100px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  will-change: transform, opacity;
+}
+
+.venom-squished-head {
+  width: 80px;
+  height: 80px;
+  animation: kelindesSquashAnim 0.75s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  transform-origin: center bottom;
+  filter: drop-shadow(0 4px 12px rgba(0, 240, 255, 0.6));
+}
+
+@keyframes kelindesSquashAnim {
+  0% {
+    transform: scale(0.2) translateY(-40px) rotate(0deg);
+    opacity: 0;
+  }
+  20% {
+    transform: scale(1.15) translateY(-5px) rotate(-8deg);
+    opacity: 1;
+  }
+  35% {
+    /* IMPACT KELINDES: pipih melebar ke samping, lidah melet keluar! */
+    transform: scaleX(2.2) scaleY(0.22) translateY(32px) rotate(4deg);
+    filter: drop-shadow(0 0 18px rgba(239, 68, 68, 0.9));
+  }
+  50% {
+    /* Rebound kenyal / elastis */
+    transform: scaleX(0.7) scaleY(1.4) translateY(-15px) rotate(-4deg);
+  }
+  70% {
+    /* Settling squish */
+    transform: scaleX(1.1) scaleY(0.85) translateY(5px) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    /* Dissolving symbiote splash */
+    transform: scale(0.3) translateY(20px) rotate(15deg);
+    opacity: 0;
+  }
+}
+
+/* Splat droplets that burst out during impact */
+.splat-droplet {
+  position: absolute;
+  background: radial-gradient(circle, #00f0ff 20%, #9333ea 70%, #000 100%);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: dropletBurst 0.6s cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
+}
+
+@keyframes dropletBurst {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--dx), var(--dy)) scale(0);
+    opacity: 0;
+  }
+}
+
+/* Comic "SPLAT!!" text flash */
+.splat-text {
+  position: absolute;
+  top: -25px;
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 900;
+  color: #facc15;
+  text-shadow: 2px 2px 0px #000, 0 0 10px #ef4444;
+  animation: splatTextPop 0.6s ease-out forwards;
+  letter-spacing: 1px;
+}
+
+@keyframes splatTextPop {
+  0% { transform: scale(0.5) translateY(10px); opacity: 0; }
+  35% { transform: scale(1.3) translateY(-5px); opacity: 1; }
+  100% { transform: scale(1) translateY(-20px); opacity: 0; }
+}
+
+/* ==========================================================================
+   CHIBI VENOM BERJALAN (WALKING CHIBI VENOM ENGINE)
+   ========================================================================== */
+
+#chibi-venom-companion {
+  position: fixed;
+  bottom: 12px;
+  left: 0;
+  width: 80px;
+  height: 95px;
+  z-index: 99990;
+  cursor: grab;
+  user-select: none;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.8));
+}
+
+#chibi-venom-companion:active {
+  cursor: grabbing;
+}
+
+.chibi-venom-body-wrap {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  animation: chibiBob 0.45s ease-in-out infinite alternate;
+}
+
+@keyframes chibiBob {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-4px) rotate(1.5deg); }
+  100% { transform: translateY(0px) rotate(-1.5deg); }
+}
+
+.chibi-leg-left {
+  animation: chibiWalkLeft 0.4s ease-in-out infinite alternate;
+  transform-origin: 25px 65px;
+}
+.chibi-leg-right {
+  animation: chibiWalkRight 0.4s ease-in-out infinite alternate;
+  transform-origin: 55px 65px;
+}
+
+@keyframes chibiWalkLeft {
+  0% { transform: rotate(-22deg) translateY(-2px); }
+  100% { transform: rotate(22deg) translateY(2px); }
+}
+@keyframes chibiWalkRight {
+  0% { transform: rotate(22deg) translateY(2px); }
+  100% { transform: rotate(-22deg) translateY(-2px); }
+}
+
+.chibi-tongue {
+  animation: tongueSlither 0.8s ease-in-out infinite alternate;
+  transform-origin: 40px 52px;
+}
+
+@keyframes tongueSlither {
+  0% { transform: rotate(-6deg) scale(0.9); }
+  50% { transform: rotate(8deg) scale(1.1); }
+  100% { transform: rotate(-10deg) scale(1.05); }
+}
+
+.chibi-eye-white {
+  animation: eyeBlinkPulsate 3.5s ease-in-out infinite;
+}
+
+@keyframes eyeBlinkPulsate {
+  0%, 94%, 100% { transform: scaleY(1); }
+  96% { transform: scaleY(0.1); }
+  98% { transform: scaleY(1); }
+}
+
+/* Chibi Bubble Dialog */
+.chibi-speech-bubble {
+  position: absolute;
+  top: -55px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(10, 14, 25, 0.95);
+  border: 1px solid var(--color-venom-cyan);
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.chibi-speech-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px 6px 0;
+  border-style: solid;
+  border-color: var(--color-venom-cyan) transparent;
+}
+
+.chibi-speech-bubble.active {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-5px);
+}
+
+/* ==========================================================================
+   AI ASSISTANT (HALF MONIC HUMAN CHIBI / HALF VENOM SYMBIOTE)
+   ========================================================================== */
+
+.ai-assistant-widget {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 99995;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.ai-avatar-btn {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  position: relative;
+  background: linear-gradient(135deg, #1e1b4b, #000);
+  border: 2px solid var(--color-venom-cyan);
+  box-shadow: 0 0 25px rgba(0, 240, 255, 0.6), inset 0 0 10px rgba(147, 51, 234, 0.6);
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+
+.ai-avatar-btn:hover {
+  transform: scale(1.1) rotate(-3deg);
+  box-shadow: 0 0 35px rgba(0, 240, 255, 0.9);
+}
+
+.pulse-ring {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid var(--color-venom-cyan);
+  animation: pulseRipple 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+  pointer-events: none;
+}
+
+@keyframes pulseRipple {
+  0% { transform: scale(1); opacity: 0.9; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+
+.ai-chat-window {
+  width: 360px;
+  max-width: calc(100vw - 32px);
+  height: 520px;
+  max-height: 80vh;
+  background: rgba(11, 14, 23, 0.96);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 240, 255, 0.4);
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 240, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin-bottom: 12px;
+  transform-origin: bottom right;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ai-chat-window.hidden {
+  opacity: 0;
+  transform: scale(0.8) translateY(20px);
+  pointer-events: none;
+  display: none !important;
+}
+
+/* Symbiote Tendril Divider */
+.tendril-line {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-venom-cyan), var(--color-venom-purple), transparent);
+  width: 100%;
+  position: relative;
+}
+
+/* ==========================================================================
+   INTERACTIVE MIKROTIK TERMINAL
+   ========================================================================== */
+
+.terminal-box {
+  background: #05070a;
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.9), 0 10px 30px rgba(0, 0, 0, 0.7);
+  font-family: var(--font-code);
+  border-radius: 10px;
+}
+
+.terminal-header {
+  background: #0f141f;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 8px 14px;
+}
+
+.terminal-body {
+  height: 280px;
+  overflow-y: auto;
+  padding: 14px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.terminal-input-row {
+  display: flex;
+  align-items: center;
+  background: #090d15;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 8px 14px;
+}
+
+/* ==========================================================================
+   SYMBIOTE LOGIN MODAL
+   ========================================================================== */
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 5, 8, 0.85);
+  backdrop-filter: blur(12px);
+  z-index: 100000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.modal-backdrop.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-card {
+  width: 95%;
+  max-width: 460px;
+  background: linear-gradient(145deg, #0d101a 0%, #06080e 100%);
+  border: 1px solid rgba(0, 240, 255, 0.4);
+  border-radius: 24px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 35px rgba(0, 240, 255, 0.25);
+  overflow: hidden;
+  transform: translateY(20px) scale(0.95);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-backdrop.active .modal-card {
+  transform: translateY(0) scale(1);
+}
+
+/* ==========================================================================
+   BUTTONS & BADGES
+   ========================================================================== */
+
+.btn-venom-primary {
+  background: linear-gradient(135deg, #00f0ff, #3b82f6);
+  color: #05070a;
+  font-weight: 700;
+  padding: 10px 22px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-venom-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(0, 240, 255, 0.7);
+  background: linear-gradient(135deg, #38bdf8, #00f0ff);
+}
+
+.btn-venom-purple {
+  background: linear-gradient(135deg, #9333ea, #c026d3);
+  color: #ffffff;
+  font-weight: 700;
+  padding: 10px 22px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(147, 51, 234, 0.4);
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-venom-purple:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(192, 38, 211, 0.7);
+}
+
+.btn-venom-ghost {
+  background: rgba(255, 255, 255, 0.05);
+  color: #e2e8f0;
+  font-weight: 600;
+  padding: 9px 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-venom-ghost:hover {
+  background: rgba(0, 240, 255, 0.1);
+  border-color: var(--color-venom-cyan);
+  color: var(--color-venom-cyan);
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+}
+
+/* Venom Teeth Border Decoration */
+.venom-teeth-border {
+  position: relative;
+}
+.venom-teeth-border::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: repeating-linear-gradient(
+    90deg,
+    #00f0ff 0px,
+    #00f0ff 10px,
+    transparent 10px,
+    transparent 15px
+  );
+  opacity: 0.5;
+}
+
+/* Animations helper */
+@keyframes floatGentle {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+.float-anim {
+  animation: floatGentle 4s ease-in-out infinite;
+}
+
+/* Camera Face Tracking HUD Cyber Scanner */
+#face-tracking-hud {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 240, 255, 0.35);
+  animation: hudFadeIn 0.3s ease-out forwards;
+}
+
+@keyframes hudFadeIn {
+  from { opacity: 0; transform: translateY(15px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+#face-tracking-hud video {
+  filter: contrast(1.1) brightness(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #chibi-venom-companion {
+    bottom: 8px;
+    width: 65px;
+    height: 78px;
+  }
+  .ai-chat-window {
+    width: calc(100vw - 32px);
+    right: 0;
+  }
+}

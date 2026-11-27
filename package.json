@@ -1,0 +1,28 @@
+{
+  "name": "monica-venom-tech-hub",
+  "version": "2.0.0",
+  "description": "Portofolio Interaktif TKJ Monica Kartika Indah Riyanti dengan Asisten AI Gemini, Google Search Grounding, Face Tracking, dan Tema Marvel Venom HD",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "@google/genai": "^0.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  },
+  "keywords": [
+    "venom",
+    "portfolio",
+    "tkj",
+    "mikrotik",
+    "gemini-api",
+    "google-search-grounding",
+    "face-tracking"
+  ],
+  "author": "Monica Kartika Indah Riyanti",
+  "license": "MIT"
+}
